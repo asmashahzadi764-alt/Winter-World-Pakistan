@@ -1,0 +1,197 @@
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+}
+
+.nav-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  padding: 6px;
+}
+
+.nav-links li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 10px 32px;
+  border-radius: 50px;
+  transition: background 0.2s;
+}
+
+.nav-links li a.active {
+  background: #8b2fc9;
+  color: #fff;
+}
+
+.nav-links li a:hover:not(.active) {
+  background: #8b2fc9;
+}
+
+.btn-book {
+  display: inline-block;
+  text-decoration: none;
+  background: #8b2fc9;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 14px 32px;
+  border-radius: 50px;
+}
+
+.btn-book:hover {
+  background: #6e1fa8;
+}
+
+/* ============ HAMBURGER ========= */
+.hamburger {
+  display: none;
+}
+
+/* ============== HERO ==========*/
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 520px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero-tag {
+  font-size: 28px;
+  font-weight: 900;
+  color: #f5c518;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* ============ CART ================= */
+.cart-btn {
+  position: absolute;
+  bottom: 28px;
+  right: 24px;
+  z-index: 20;
+  width: 52px;
+  height: 52px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+  transition: background 0.2s;
+}
+
+.cart-btn svg {
+  width: 22px;
+  height: 22px;
+  color: #6e1fa8;
+  stroke: #6e1fa8;
+}
+
+.cart-count {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  background: #e53935;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 14px 16px;
+  }
+
+  .btn-book {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 20, 60, 0.95);
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li a {
+    padding: 14px 24px;
+    font-size: 13px;
+  }
+
+  .hero {
+    height: 100svh;
+  }
+
+  .hero-bg {
+    object-position: top center;
+  }
+}
