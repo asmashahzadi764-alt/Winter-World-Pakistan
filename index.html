@@ -14,7 +14,7 @@
     <div class="nav-logo">
       <img src="assets/logo.svg" alt="Winter World Logo" />
     </div>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="#" class="active">HOME</a></li>
       <li><a href="#">ABOUT US</a></li>
       <li><a href="#">EXPERIENCES</a></li>
@@ -83,9 +83,68 @@
     </div>
   </section>
 
+ <!------------- FOOTER ------------>
+  <footer>
+
+    <div class="footer-top">
+      <img src="assets/fottor image.png" alt="Winter World" />
+    </div>
+
+    <div class="footer-main">
+
+      <div class="footer-links">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#">Winterland</a></li>
+          <li><a href="#">Carnival World</a></li>
+          <li><a href="#">Bubble Dome</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Experiences</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Safety Rules</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-brand">
+        <div class="footer-brand-logos">
+          <img src="assets/Winterland-Logo.svg" alt="Winterland" />
+          <img src="assets/carnival-logo.svg" alt="Carnival" />
+          <img src="assets/bubble-dome-logo.svg" alt="Bubble Dome" />
+        </div>
+        <p>Winter World is Lahore's ultimate entertainment destination, bringing together three unique experiences in one place. It includes Winterland 2.0, an indoor snow and ice theme park now transformed into the Kingdom of Ice and Snow; Carnival, a large-scale outdoor amusement park packed with thrilling rides, games, food, music, and attractions like the giant dancing fountain; and Bubble Dome, Pakistan's largest indoor ball pit arena with over one million balls. Together, these destinations create a complete entertainment hub designed for unlimited fun, offering something exciting for visitors of all ages.</p>
+      </div>
+
+      <div class="footer-timings">
+        <div class="timing-block">
+          <h3>Winterland Timings</h3>
+          <span>Monday – Sun: 2PM - 12AM</span>
+          <a href="https://maps.app.goo.gl/WYpCEzDnV5JaEAvj7" target="_blank">See The Location &#8599;</a>
+        </div>
+        <div class="timing-block">
+          <h3>Carnival Timings</h3>
+          <span>Monday – Sun: 4PM - 12AM</span>
+          <a href="https://maps.app.goo.gl/WYpCEzDnV5JaEAvj7" target="_blank">See The Location &#8599;</a>
+        </div>
+        <div class="timing-block">
+          <h3>Bubbledome Timings</h3>
+          <span>Monday – Sun: 2PM - 12AM</span>
+          <a href="https://maps.app.goo.gl/WYpCEzDnV5JaEAvj7" target="_blank">See The Location &#8599;</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bar">
+      © Copyright 2026 Winter World | Designed &amp; Developed by <a href="#">Echo Digital</a>
+    </div>
+
+  </footer>
+
   <script>
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    const navLinks = document.getElementById('navLinks');
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('open');
     });
